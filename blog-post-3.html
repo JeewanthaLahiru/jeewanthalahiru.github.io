@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>BreezyCV - Resume / CV / vCard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="BreezyCV - Resume / CV / vCard Template" />
+    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, portfolio" />
+    <meta name="author" content="lmpixels" />
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animations.css" type="text/css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <script src="js/modernizr.custom.js"></script>
+  </head>
+
+  <body>
+    <!-- Animated Background -->
+    <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
+    <!-- /Animated Background -->
+
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="preloader-spinner">
+        </div>
+      </div>
+    </div>
+    <!-- /Loading animation -->
+
+    <div class="page">
+      <div class="page-content">
+
+          <header id="site_header" class="header mobile-menu-hide">
+            <div class="header-content">
+              <div class="header-photo">
+                <img src="img/main_photo_2.jpg" alt="Alex Smith">
+              </div>
+              <div class="header-titles">
+                <h2>Jeewantha Lahiru</h2>
+                <h4>Game Developer</h4>
+              </div>
+            </div>
+
+            <ul class="main-menu">
+              <li class="active">
+                <a href="index.html#about-me" class="nav-anim">
+                  <span class="menu-icon lnr lnr-user"></span>
+                  <span class="link-text">About Me</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#resume" class="nav-anim">
+                  <span class="menu-icon lnr lnr-graduation-hat"></span>
+                  <span class="link-text">Resume</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#portfolio" class="nav-anim">
+                  <span class="menu-icon lnr lnr-briefcase"></span>
+                  <span class="link-text">Portfolio</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#blog" class="nav-anim">
+                  <span class="menu-icon lnr lnr-book"></span>
+                  <span class="link-text">Blog</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#contact" class="nav-anim">
+                  <span class="menu-icon lnr lnr-envelope"></span>
+                  <span class="link-text">Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="social-links">
+              <ul>
+                <li><a href="https://www.linkedin.com/in/jeewantha-lahiru-b85b2917b/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.facebook.com/jeewantha.lahiru.9/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://x.com/JeewanthaLahir1" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/@jeedev" target="_blank"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="header-buttons">
+              <a href="https://drive.google.com/file/d/1N-S_0s-rXeXYXAiYoFLy5RfMBsBo687y/view?usp=sharing" target="_blank" class="btn btn-primary">Download CV</a>
+            </div>
+          
+          </header>
+
+          <!-- Mobile Navigation -->
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- End Mobile Navigation -->
+
+          <div class="content-area single-page-area">
+            <div class="single-page-content">
+
+              <article class="post">
+
+                <div class="post-thumbnail">
+                  <img src="img/blog/blog_post_20_full.jpg" alt="image">
+                </div>
+
+                <div class="post-content">
+                  <!-- /Entry header -->
+                  <header class="entry-header">
+                    <!-- Entry meta -->
+                    <div class="entry-meta entry-meta-top">
+                      <span><a href="#" rel="category tag">Browsers</a></span>        
+                    </div>
+                    <!-- /Entry meta -->
+
+                    <h2 class="entry-title">How web browsers use Processes and Threads</h2>
+                  </header>
+                  <!-- /Entry header -->
+
+                  <!-- Entry content -->
+                  <div class="entry-content">
+                    <div class="row">
+                      <div class=" col-xs-12 col-sm-12 ">
+                        <div class="col-inner">
+                          <p>A process can be described as an application's executing program. A thread is the one that lives inside of a process and executes any part of its process's program. When you start an application, a process is created. The program might create thread(s) to help it do work, but that's optional.</p>
+                          <p>A process can ask the Operating System to spin up another process to run different tasks. When this happens, different parts of the memory are allocated for the new process. If two processes need to talk, they can do so by using Inter Process Communication (IPC). Many applications are designed to work this way so that if a worker process get unresponsive, it can be restarted without stopping other processes which are running different parts of the application.</p>
+                          <p>Which process controls what?</p>
+                          <p>Browser: Controls the applications including address bar, bookmarks, back and forward buttons. Also handles the invisible, privileged parts of a web browser such as network requests and file access.</p>
+                          <p>Renderer: Controls anything inside of the tab where a website is displayed.</p>
+                          <p>Plugin: Controls any plugins used by the website, for example, flash.</p>
+                          <p>GPU: Handles GPU tasks in isolation from other processes. it is separated into different process because GPUs handles requests from multiple apps and draw them in the same surface.</p>
+                          <br>
+                          <p><b>How google chrome use Processes and Threads</b></p>
+                          <p>Chrome has a multi-process architecture and each process is heavily multi-threaded. The main goal is to keep the main thread (“UI” thread in the browser process) and IO thread (each process' thread for handling IPC) responsive. This means offloading any blocking I/O or other expensive operations to other threads.</p>
+                          <p><b>Threads</b><br>
+                            Every chrome process has,<br><br>
+                            a main thread
+                            <ul>
+                                <li>In the browser process (BrowserThread::UI): updates the UI</li>
+                                <li>In renderer processes (Blink main thread):runs most of Blink</li>
+                            </ul>
+                            
+                            
+                            <br>an IO thread<br><br>
+                            <ul>
+                                <li>in the browser process (BrowserThread::IO): handles IPCs and network requests</li>
+                                <li>in renderer processes: handles IPCs.</li>
+                            </ul>
+                            a few more special-purpose threads.<br>
+                            and a pool of general-purpose threads.</p>
+
+                            <p>
+                                <b>How Firefox use Processes and Threads</b><br><br>
+Years ago, Mozilla made a fateful decision about the future of Firefox development, one that made it much more difficult to integrate multiprocessing into the existing browser. Roughly 10 years ago, the major way Firefox had distinguished itself compared with Internet Explorer was through its support for add-ons and extensions. But the same add-on abilities that had made the browser popular also made it difficult to add multiprocessor support. Mozilla therefore committed to transitioning away from its old add-on model and towards multi-browser web extension support, while simultaneously launching the Electrolysis project to create a new browser version that could support a multi-processing architecture.
+                            </p>
+
+                            <p>
+                                <b>Comparing Chrome and Firefox</b><br>
+                                Chrome and Firefox now both support multithreading, but they do it in different ways. In Chrome, each and every tab you open gets its own content process. Ten tabs, 10 processes. One hundred tabs, 100 processes. This approach maximizes perfomance, but you pay a heafty penalty in memory consumption and battery life. Firefox doesn't take this approach to the problem, but instead spins up to four content process threads by default. In Firefox, the first 4 tabs each use those 4 processes and additional tabs tun using threads within those processes. Multiple tabs within a process share the browser engine that already exists in memory, instead of each creating their own.<br>
+                                Mozilla claims that Firefox also uses dramatically less memory than other competing browsers, with Chrome using 1.77x more RAM than Firefox in 64-bit and 2.44x in 32-bit mode.<br>
+
+                            </p>
+
+                            <p><b>Why Chrome gets too hot when Firefox does not</b><br>
+                                While both Firefox and Chrome now run using multiple processes, Firefox does some things differently to avoid using up your computer's limited memory.
+
+By default, Chrome creates a separate content process for each instance of a site that you visit. Open 10 different tabs with 10 sites in Chrome, and you'll have 10 different processes. Each of those processes has its own memory — with their own instance of the browser's engine. One open tab in Chrome typically consumes hundreds of megabytes of RAM. Chrome's liberal approach to creating processes can lead to very high memory usage.
+
+On the other hand, Firefox's more conservative approach to using processes often results in Firefox using less memory than Chrome. By default, Firefox now creates up to 4 separate processes for web page content. So, your first 4 tabs each use those 4 processes, and additional tabs run using threads within those processes. Multiple tabs within a process share the browser engine that already exists in memory, instead of each creating their own.
+                            </p>
+                          <img src="img/blog/blog_post_21.jpg" class="size-blog-masonry-image-two-c" alt="An Overview of E-Commerce Platforms" title="" />
+
+                          <blockquote class="quote">Start with something simple and small, then expand over time. If people call it a 'toy' you're definitely onto something.
+                            <footer class="quote-author">
+                              <span>Aaron Levie</span>
+                            </footer>
+                          </blockquote>
+
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Entry content -->
+    
+                  <div class="entry-meta entry-meta-bottom">
+                    <div class="date-author">
+                      <span class="entry-date">
+                        <a href="#" rel="bookmark">
+                          <i class="far fa-clock"></i> <span class="entry-date"> Jul 17, 2020</span>
+                        </a>
+                      </span>
+                      <span class="author vcard">
+                        <a class="url fn n" href="https://medium.com/@jeewanthalahiru" rel="author" target="_blank"> <i class="fas fa-user"></i> Jeewantha Lahiru</a>
+                      </span>
+                    </div>
+      
+                    <!-- Share Buttons -->
+                    
+                    <!-- /Share Buttons -->
+                  </div>
+
+                  <div class="post-tags">
+                    <div class="tags">
+                      <a href="#" rel="tag">Browsers</a>
+                      <a href="#" rel="tag">Threads</a>
+                      <a href="#" rel="tag">Chrome</a>
+                      <a href="#" rel="tag">Firefox</a>
+                      <a href="#" rel="tag">Web</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/animating.js"></script>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src='js/perfect-scrollbar.min.js'></script>
+    <script src='js/jquery.shuffle.min.js'></script>
+    <script src='js/masonry.pkgd.min.js'></script>
+    <script src='js/owl.carousel.min.js'></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
+    <script src="js/jquery.googlemap.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

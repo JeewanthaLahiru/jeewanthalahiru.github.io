@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>BreezyCV - Resume / CV / vCard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="BreezyCV - Resume / CV / vCard Template" />
+    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, portfolio" />
+    <meta name="author" content="lmpixels" />
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animations.css" type="text/css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <script src="js/modernizr.custom.js"></script>
+  </head>
+
+  <body>
+    <!-- Animated Background -->
+    <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
+    <!-- /Animated Background -->
+
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="preloader-spinner">
+        </div>
+      </div>
+    </div>
+    <!-- /Loading animation -->
+
+    <div class="page">
+      <div class="page-content">
+
+          <header id="site_header" class="header mobile-menu-hide">
+            <div class="header-content">
+              <div class="header-photo">
+                <img src="img/main_photo_2.jpg" alt="Alex Smith">
+              </div>
+              <div class="header-titles">
+                <h2>Jeewantha Lahiru</h2>
+                <h4>Game Developer</h4>
+              </div>
+            </div>
+
+            <ul class="main-menu">
+              <li class="active">
+                <a href="index.html#about-me" class="nav-anim">
+                  <span class="menu-icon lnr lnr-user"></span>
+                  <span class="link-text">About Me</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#resume" class="nav-anim">
+                  <span class="menu-icon lnr lnr-graduation-hat"></span>
+                  <span class="link-text">Resume</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#portfolio" class="nav-anim">
+                  <span class="menu-icon lnr lnr-briefcase"></span>
+                  <span class="link-text">Portfolio</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#blog" class="nav-anim">
+                  <span class="menu-icon lnr lnr-book"></span>
+                  <span class="link-text">Blog</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#contact" class="nav-anim">
+                  <span class="menu-icon lnr lnr-envelope"></span>
+                  <span class="link-text">Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="social-links">
+              <ul>
+                <li><a href="https://www.linkedin.com/in/jeewantha-lahiru-b85b2917b/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.facebook.com/jeewantha.lahiru.9/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://x.com/JeewanthaLahir1" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/@jeedev" target="_blank"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="header-buttons">
+              <a href="https://drive.google.com/file/d/1N-S_0s-rXeXYXAiYoFLy5RfMBsBo687y/view?usp=sharing" target="_blank" class="btn btn-primary">Download CV</a>
+            </div>
+          
+          </header>
+
+          <!-- Mobile Navigation -->
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- End Mobile Navigation -->
+
+          <div class="content-area single-page-area">
+            <div class="single-page-content">
+
+              <article class="post">
+
+                <div class="post-thumbnail">
+                  <img src="img/blog/blog_post_10_full.jpg" alt="image">
+                </div>
+
+                <div class="post-content">
+                  <!-- /Entry header -->
+                  <header class="entry-header">
+                    <!-- Entry meta -->
+                    <div class="entry-meta entry-meta-top">
+                      <span><a href="#" rel="category tag">Unreal Engine</a></span>        
+                    </div>
+                    <!-- /Entry meta -->
+
+                    <h2 class="entry-title">Find the nearest location on given vector array on Unreal Engine</h2>
+                  </header>
+                  <!-- /Entry header -->
+
+                  <!-- Entry content -->
+                  <div class="entry-content">
+                    <div class="row">
+                      <div class=" col-xs-12 col-sm-12 ">
+                        <div class="col-inner">
+                          <p>When you are using Unreal Engine, sometimes you may need to find the nearest location for a certain location using a vector array. For example, if you have a line trace and there are multiple actors each having several locations stored in an array, you need to find the closest location to the impact location within your vector array. (I'm doing this using blueprints)</p>
+                          <p>so you have to do like this,</p>
+                          <p>Create a function and name it as you need. I suggest naming it “GetNearestLocation” with a vector input called “HitPoint”. This input specifies the point from which you want to find the nearest location within the given array.</p>
+                          <p>Then, obtain the array length. If the length is greater than 1, you can proceed with the calculation. Otherwise, you can simply return the value at the 0th index.</p>
+                          <img src="img/blog/blog_post_10.jpg" class="size-blog-masonry-image-two-c" alt="An Overview of E-Commerce Platforms" title="" />
+                          <p>Create a forEach loop for the given array. If the index equals 0, then instantiate a variable called “ClosestIndex” and set its value to 0. Next, calculate the distance from the hit location to the value at the 0th index and assign this distance to a variable named “ClosestDistance”. Ensure that these variables are declared locally.</p>
+                          <img src="img/blog/blog_post_11.jpg" class="size-blog-masonry-image-two-c" alt="An Overview of E-Commerce Platforms" title="" />
+                          <p>If the index is not equal to 0, then verify whether the calculated distance is less than the ClosestDistance. If this condition holds true, update the ClosestDistance with the calculated distance and set the ClosestIndex to the current ArrayIndex.</p>
+                          <img src="img/blog/blog_post_12.jpg" class="size-blog-masonry-image-two-c" alt="An Overview of E-Commerce Platforms" title="" />
+                          <p>Then you can return the closest value by getting the value of the given array's ClosestIndex.</p>
+                          <p>I will add a full code image down below</p>
+                          <img src="img/blog/blog_post_13.jpg" class="size-blog-masonry-image-two-c" alt="An Overview of E-Commerce Platforms" title="" />
+
+                          <blockquote class="quote">you need to make a game wrong at least two or three times before you find the right path.
+                            <footer class="quote-author">
+                              <span>Ken Wong</span>
+                            </footer>
+                          </blockquote>
+
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Entry content -->
+    
+                  <div class="entry-meta entry-meta-bottom">
+                    <div class="date-author">
+                      <span class="entry-date">
+                        <a href="#" rel="bookmark">
+                          <i class="far fa-clock"></i> <span class="entry-date"> Apr 21, 2024</span>
+                        </a>
+                      </span>
+                      <span class="author vcard">
+                        <a class="url fn n" href="https://medium.com/@jeewanthalahiru" rel="author" target="_blank"> <i class="fas fa-user"></i> Jeewantha Lahiru</a>
+                      </span>
+                    </div>
+      
+                    <!-- Share Buttons -->
+                    
+                    <!-- /Share Buttons -->
+                  </div>
+
+                  <div class="post-tags">
+                    <div class="tags">
+                      <a href="#" rel="tag">Unreal Engine</a>
+                      <a href="#" rel="tag">Blueprints</a>
+                      <a href="#" rel="tag">Nearest</a>
+                      <a href="#" rel="tag">Location</a>
+                      <a href="#" rel="tag">Array</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/animating.js"></script>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src='js/perfect-scrollbar.min.js'></script>
+    <script src='js/jquery.shuffle.min.js'></script>
+    <script src='js/masonry.pkgd.min.js'></script>
+    <script src='js/owl.carousel.min.js'></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
+    <script src="js/jquery.googlemap.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
