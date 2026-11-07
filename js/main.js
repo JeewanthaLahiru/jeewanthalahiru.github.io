@@ -163,8 +163,12 @@
                 eventImage = $card.attr('data-award-event'),
                 extraImage = $card.attr('data-award-extra-image'),
                 certificateImage = $card.attr('data-award-certificate'),
-                $eventFigure = $awardsModal.find('.award-event-image').closest('figure'),
-                $extraFigure = $awardsModal.find('.award-extra-image-item'),
+                interviewUrl = $card.attr('data-award-interview-url'),
+                aftermovieUrl = $card.attr('data-award-aftermovie-url'),
+                galleryData = $card.attr('data-award-gallery'),
+                galleryItems = [],
+                $photoGallery = $awardsModal.find('.award-event-gallery-images'),
+                $mediaLinks = $awardsModal.find('.award-media-links'),
                 $certificateFigure = $awardsModal.find('.award-certificate-item');
 
             $lastAwardTrigger = $card;
@@ -172,28 +176,63 @@
             $awardsModal.find('.award-modal-date').text($card.attr('data-award-date'));
             $awardsModal.find('.award-modal-description').text($card.attr('data-award-description'));
 
-            if (eventImage) {
-                $awardsModal.find('.award-event-image')
-                    .attr('src', eventImage)
-                    .attr('alt', $card.attr('data-award-image-alt') || 'Award or activity image');
-                $awardsModal.find('.award-event-caption').text($card.attr('data-award-image-caption') || 'Event photo');
-                $eventFigure.show();
-            } else {
-                $eventFigure.hide();
+            $awardsModal.find('.award-interview-link').toggle(!!interviewUrl).attr('href', interviewUrl || '#');
+            $awardsModal.find('.award-aftermovie-link').toggle(!!aftermovieUrl).attr('href', aftermovieUrl || '#');
+            $mediaLinks.toggle(!!(interviewUrl || aftermovieUrl));
+
+            if (galleryData) {
+                try {
+                    galleryItems = JSON.parse(galleryData);
+                } catch (error) {
+                    galleryItems = [];
+                }
             }
 
-            if (extraImage) {
-                $awardsModal.find('.award-extra-image')
-                    .attr('src', extraImage)
-                    .attr('alt', $card.attr('data-award-extra-alt') || 'Additional event photo');
-                $awardsModal.find('.award-extra-caption').text($card.attr('data-award-extra-caption') || 'Event photo');
-                $extraFigure.show();
-            } else {
-                $extraFigure.hide();
+            if (!Array.isArray(galleryItems)) {
+                galleryItems = [];
             }
+            if (!galleryItems.length && eventImage) {
+                galleryItems.push({
+                    src: eventImage,
+                    alt: $card.attr('data-award-image-alt') || 'Award or activity image',
+                    caption: $card.attr('data-award-image-caption') || 'Event photo'
+                });
+                if (extraImage) {
+                    galleryItems.push({
+                        src: extraImage,
+                        alt: $card.attr('data-award-extra-alt') || 'Additional event photo',
+                        caption: $card.attr('data-award-extra-caption') || 'Event photo'
+                    });
+                }
+            }
+
+            $photoGallery.empty();
+            $.each(galleryItems, function (_, item) {
+                if (!item || !item.src) {
+                    return;
+                }
+                var label = item.alt || 'Award or activity photo',
+                    $image = $('<img>', {
+                        src: item.src,
+                        alt: label,
+                        tabindex: 0,
+                        role: 'button',
+                        'aria-label': 'Open full-size image: ' + label
+                    }).addClass('award-gallery-image'),
+                    $figure = $('<figure>').addClass('award-gallery-item');
+
+                $figure.append($image);
+                if (item.caption) {
+                    $figure.append($('<figcaption>').text(item.caption));
+                }
+                $photoGallery.append($figure);
+            });
 
             if (certificateImage) {
-                $awardsModal.find('.award-certificate-image').attr('src', certificateImage).show();
+                $awardsModal.find('.award-certificate-image')
+                    .attr('src', certificateImage)
+                    .attr('alt', $card.attr('data-award-certificate-alt') || 'Award certificate')
+                    .show();
                 $awardsModal.find('.award-image-placeholder').hide();
                 $certificateFigure.show();
             } else {
