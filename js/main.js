@@ -152,6 +152,151 @@
             mobileMenuHide();
         });
 
+        // Awards detail popup
+        var $awardsModal = $('#awards-modal');
+        var $awardImageLightbox = $('#award-image-lightbox');
+        var $lastAwardTrigger = null;
+        var $lastAwardImage = null;
+
+        $('.awards-grid').on('click', '.award-card', function () {
+            var $card = $(this),
+                eventImage = $card.attr('data-award-event'),
+                extraImage = $card.attr('data-award-extra-image'),
+                certificateImage = $card.attr('data-award-certificate'),
+                interviewUrl = $card.attr('data-award-interview-url'),
+                aftermovieUrl = $card.attr('data-award-aftermovie-url'),
+                galleryData = $card.attr('data-award-gallery'),
+                galleryItems = [],
+                $photoGallery = $awardsModal.find('.award-event-gallery-images'),
+                $mediaLinks = $awardsModal.find('.award-media-links'),
+                $certificateFigure = $awardsModal.find('.award-certificate-item');
+
+            $lastAwardTrigger = $card;
+            $awardsModal.find('#award-modal-title').text($card.attr('data-award-title'));
+            $awardsModal.find('.award-modal-date').text($card.attr('data-award-date'));
+            $awardsModal.find('.award-modal-description').text($card.attr('data-award-description'));
+
+            $awardsModal.find('.award-interview-link').toggle(!!interviewUrl).attr('href', interviewUrl || '#');
+            $awardsModal.find('.award-aftermovie-link').toggle(!!aftermovieUrl).attr('href', aftermovieUrl || '#');
+            $mediaLinks.toggle(!!(interviewUrl || aftermovieUrl));
+
+            if (galleryData) {
+                try {
+                    galleryItems = JSON.parse(galleryData);
+                } catch (error) {
+                    galleryItems = [];
+                }
+            }
+
+            if (!Array.isArray(galleryItems)) {
+                galleryItems = [];
+            }
+            if (!galleryItems.length && eventImage) {
+                galleryItems.push({
+                    src: eventImage,
+                    alt: $card.attr('data-award-image-alt') || 'Award or activity image',
+                    caption: $card.attr('data-award-image-caption') || 'Event photo'
+                });
+                if (extraImage) {
+                    galleryItems.push({
+                        src: extraImage,
+                        alt: $card.attr('data-award-extra-alt') || 'Additional event photo',
+                        caption: $card.attr('data-award-extra-caption') || 'Event photo'
+                    });
+                }
+            }
+
+            $photoGallery.empty();
+            $.each(galleryItems, function (_, item) {
+                if (!item || !item.src) {
+                    return;
+                }
+                var label = item.alt || 'Award or activity photo',
+                    $image = $('<img>', {
+                        src: item.src,
+                        alt: label,
+                        tabindex: 0,
+                        role: 'button',
+                        'aria-label': 'Open full-size image: ' + label
+                    }).addClass('award-gallery-image'),
+                    $figure = $('<figure>').addClass('award-gallery-item');
+
+                $figure.append($image);
+                if (item.caption) {
+                    $figure.append($('<figcaption>').text(item.caption));
+                }
+                $photoGallery.append($figure);
+            });
+
+            if (certificateImage) {
+                $awardsModal.find('.award-certificate-image')
+                    .attr('src', certificateImage)
+                    .attr('alt', $card.attr('data-award-certificate-alt') || 'Award certificate')
+                    .show();
+                $awardsModal.find('.award-image-placeholder').hide();
+                $certificateFigure.show();
+            } else {
+                $awardsModal.find('.award-certificate-image').hide();
+                $awardsModal.find('.award-image-placeholder').hide();
+                $certificateFigure.hide();
+            }
+
+            $awardsModal.attr('aria-hidden', 'false');
+            $('body').addClass('award-modal-open');
+            $awardsModal.find('.award-modal-close').trigger('focus');
+        });
+
+        $awardsModal.on('click', '[data-award-close]', function () {
+            $awardsModal.attr('aria-hidden', 'true');
+            $('body').removeClass('award-modal-open');
+            if ($lastAwardTrigger) {
+                $lastAwardTrigger.trigger('focus');
+            }
+        });
+
+        $awardsModal.on('click keydown', '.award-gallery-image', function (e) {
+            if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') {
+                return;
+            }
+            if (e.type === 'keydown') {
+                e.preventDefault();
+            }
+            if (!this.src || this.style.display === 'none') {
+                return;
+            }
+
+            $lastAwardImage = $(this);
+            $awardImageLightbox.find('.award-image-lightbox-content')
+                .attr('src', this.currentSrc || this.src)
+                .attr('alt', $(this).attr('alt') || 'Award image');
+            $awardImageLightbox.attr('aria-hidden', 'false');
+            $awardImageLightbox.find('.award-image-lightbox-close').trigger('focus');
+        });
+
+        $awardImageLightbox.on('click', '[data-award-image-close]', function () {
+            $awardImageLightbox.attr('aria-hidden', 'true');
+            $awardImageLightbox.find('.award-image-lightbox-content').attr('src', '');
+            if ($lastAwardImage) {
+                $lastAwardImage.trigger('focus');
+            }
+        });
+
+        $(document).on('keydown', function (e) {
+            if (e.key === 'Escape' && $awardImageLightbox.attr('aria-hidden') === 'false') {
+                $awardImageLightbox.attr('aria-hidden', 'true');
+                $awardImageLightbox.find('.award-image-lightbox-content').attr('src', '');
+                if ($lastAwardImage) {
+                    $lastAwardImage.trigger('focus');
+                }
+            } else if (e.key === 'Escape' && $awardsModal.attr('aria-hidden') === 'false') {
+                $awardsModal.attr('aria-hidden', 'true');
+                $('body').removeClass('award-modal-open');
+                if ($lastAwardTrigger) {
+                    $lastAwardTrigger.trigger('focus');
+                }
+            }
+        });
+
         // Sidebar toggle
         $('.sidebar-toggle').on("click", function () {
             $('#blog-sidebar').toggleClass('open');
