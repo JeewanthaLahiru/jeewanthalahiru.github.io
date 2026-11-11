@@ -1,0 +1,59 @@
+/* Home hero: interactive particle network + faded portrait */
+.start-page .section-content {
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.hero-network {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+}
+
+.hero-photo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 92%;
+  max-width: none;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 1;
+  /* stay opaque so the photo hides the particles behind it; darken it instead of
+     lowering opacity so it still looks faded and the name stays the focus */
+  -webkit-filter: brightness(0.38) saturate(0.85);
+  filter: brightness(0.38) saturate(0.85);
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* fade the bottom edge into the background */
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+}
+
+/* keep the name and subtitle above the photo and network */
+.start-page .section-content > .row {
+  position: relative;
+  z-index: 2;
+}
+
+.start-page .title-block h2 {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.75);
+}
+
+.start-page .title-block .sp-subtitle {
+  color: #d5d5d5;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 991px) {
+  .hero-photo {
+    height: 80%;
+    -webkit-filter: brightness(0.32) saturate(0.85);
+    filter: brightness(0.32) saturate(0.85);
+  }
+}
