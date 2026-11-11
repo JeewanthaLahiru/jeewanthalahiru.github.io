@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/hero-network.css" type="text/css">
   </head>
 
   <body>
@@ -129,6 +130,8 @@
               <!-- Home Subpage -->
               <section data-id="home" class="animated-section start-page">
                 <div class="section-content vcentered">
+                    <canvas id="hero-network" class="hero-network" aria-hidden="true"></canvas>
+                    <img class="hero-photo" src="img/home_photo.png" alt="" aria-hidden="true">
 
                     <div class="row">
                       <div class="col-sm-12 col-md-12 col-lg-12">
@@ -161,9 +164,9 @@
                   <!-- Personal Information -->
                   <div class="row">
                     <div class="col-xs-12 col-sm-7">
-                      <p>I'm Jeewantha Lahiru, a Senior Software Engineer with 5 years of hands-on experience in Unreal Engine, specializing in Gameplay Programming, Character and Animation Integration, UI/HUD Programming, AI Programming, Physics and Movement Systems, Particle Effects and VFX, Level Scripting, Networking and Multiplayer, Custom Plugin Creation, and Optimization and Profiling. I use both Blueprints and C++ to develop robust systems and dynamic, engaging game mechanics.</br>
+                      <p>I'm Jeewantha Lahiru, a Senior Software Engineer at SimCentric Technologies with nearly five years of professional experience in game development and software engineering. I specialize in Unreal Engine development, gameplay systems, simulation technologies, and immersive interactive experiences, using both C++ and Blueprints to build modular, maintainable, high-performance systems, from military VR training simulations and PX4-integrated drone simulation to NPC AI, vehicle systems, UI/HUD, and custom plugins.</br>
 
-I hold a BSc (Hons) in Software Engineering from the University of Kelaniya, where I built a strong foundation in software design and interactive systems. I'm passionate about crafting immersive experiences that entertain and resonate with players. For me, game development is about bringing ideas to life and building memorable worlds that leave a lasting impact.</p>
+I hold a BSc (Hons) in Software Engineering from the University of Kelaniya and am currently pursuing an MSc in Computer Science at the University of Peradeniya, exploring AI, machine learning, computer graphics, and agentic AI technologies. I also serve as a Visiting Lecturer at the University of Kelaniya, teaching game design and Unreal Engine development. For me, game development is about bringing ideas to life and building memorable worlds that leave a lasting impact.</p>
                     </div>
 
                     <div class="col-xs-12 col-sm-5">
@@ -219,8 +222,8 @@ I hold a BSc (Hons) in Software Engineering from the University of Kelaniya, whe
                               <i class="lnr lnr-cog"></i>
                             </div>
                             <div class="ci-text">
-                              <h4>Gameplay Programming</h4>
-                              <p>I develop core gameplay mechanics such as player controls, combat systems, inventory, and interaction logic using Blueprints and C++ to ensure a responsive and engaging player experience.</p>
+                              <h4>Gameplay Programming in C++</h4>
+                              <p>I build core gameplay systems such as player controls, interaction logic, inventory, and game rules in Unreal Engine C++, using UCLASS, UPROPERTY, and UFUNCTION reflection to expose clean, well-structured APIs to Blueprints for designers.</p>
                             </div>
                           </div>
                           <div class="info-block-w-icon">
@@ -228,31 +231,31 @@ I hold a BSc (Hons) in Software Engineering from the University of Kelaniya, whe
                               <i class="lnr lnr-laptop-phone"></i>
                             </div><div class="ci-text">
                               <h4>UI/HUD Programming</h4>
-                              <p>I design and implement responsive UI and HUD elements using Unreal Engine's UMG system, creating intuitive menus, in-game displays, and interactive widgets that are seamlessly integrated with gameplay logic through Blueprints and C++.</p>
+                              <p>I implement UI and HUD systems with C++ base widget classes and UMG, binding widgets to gameplay data through delegates and event-driven updates so interfaces stay responsive, usable, and decoupled from game logic.</p>
                             </div>
                           </div>
                           <div class="info-block-w-icon">
                             <div class="ci-icon">
                               <i class="lnr lnr-chevron-up-circle"></i>
                             </div><div class="ci-text">
-                              <h4>Physics and Movement Systems</h4>
-                              <p>I implement realistic physics and movement systems by configuring character and vehicle components, customizing collision and physical interactions, and fine-tuning movement behavior using Unreal Engine's built-in physics tools and components.</p>
+                              <h4>Physics, Vehicle and Movement Systems</h4>
+                              <p>I develop character, vehicle, and drone movement in C++ by extending Unreal's movement and physics components, handling collision, forces, and custom movement modes to achieve realistic, predictable behaviour in real-time simulations.</p>
                             </div>
                           </div>
                           <div class="info-block-w-icon">
                             <div class="ci-icon">
                               <i class="lnr lnr-apartment"></i>
                             </div><div class="ci-text">
-                              <h4>Level Scripting</h4>
-                              <p>I design and implement interactive level elements and gameplay events by scripting with Level Blueprints and Blueprint Interfaces, enabling seamless player interactions and dynamic environments in Unreal Engine.</p>
+                              <h4>Simulation and Systems Integration</h4>
+                              <p>I integrate Unreal Engine with external systems in C++, such as connecting a drone simulation to the PX4 flight controller over MAVLink for bidirectional exchange of telemetry, sensor data, and flight-control commands.</p>
                             </div>
                           </div>
                           <div class="info-block-w-icon">
                             <div class="ci-icon">
                               <i class="lnr lnr-link"></i>
                             </div><div class="ci-text">
-                              <h4>Custom Plugin Creation</h4>
-                              <p>I design and develop custom Unreal Engine plugins using C++ to extend engine functionality, automate workflows, and add specialized features tailored to project needs.</p>
+                              <h4>Custom C++ Plugins and Modules</h4>
+                              <p>I design and develop custom Unreal Engine plugins and modules in C++ to extend engine functionality, wrap third-party libraries, and package reusable features that can be shared cleanly across projects.</p>
                             </div>
                           </div>
                         </div>
@@ -267,8 +270,8 @@ I hold a BSc (Hons) in Software Engineering from the University of Kelaniya, whe
                               <i class="lnr lnr-users"></i>
                             </div>
                             <div class="ci-text">
-                              <h4>NPC AI Development</h4>
-                              <p>I develop intelligent NPC behaviors by creating AI Controllers, Behavior Trees, and Blackboards in Unreal Engine, enabling dynamic decision-making, pathfinding, and responsive interactions within the game world.</p>
+                              <h4>AI Programming</h4>
+                              <p>I develop NPC, animal, and vehicle AI using C++ AI Controllers, custom Behavior Tree tasks, services, and decorators, along with Blackboards and navigation, enabling dynamic decision-making and responsive behaviour.</p>
                             </div>
                           </div>
                           <div class="info-block-w-icon">
@@ -276,15 +279,15 @@ I hold a BSc (Hons) in Software Engineering from the University of Kelaniya, whe
                               <i class="lnr lnr-pencil"></i>
                             </div><div class="ci-text">
                               <h4>Character and Animation Integration</h4>
-                              <p>I integrate characters and animations by setting up skeletal meshes, configuring animation blueprints and state machines, and synchronizing movement with gameplay using montages, notifies, and inverse kinematics (IK) in Unreal Engine.</p>
+                              <p>I integrate characters and animations using C++ AnimInstance classes, animation blueprints, state machines, montages, notifies, and inverse kinematics (IK), keeping animation tightly synchronized with gameplay state.</p>
                             </div>
                           </div>
                           <div class="info-block-w-icon">
                             <div class="ci-icon">
                               <i class="lnr lnr-star-half"></i>
                             </div><div class="ci-text">
-                              <h4>Particle Effects and VFX</h4>
-                              <p>I create and integrate dynamic particle effects and visual effects using Unreal Engine's Niagara system, designing impactful VFX that enhance gameplay feedback and immersion.</p>
+                              <h4>Software Architecture and Data-Driven Design</h4>
+                              <p>I apply object-oriented design and modern C++ practices to build modular, reusable components, using data assets, data tables, and configuration-driven systems to keep large codebases flexible and maintainable.</p>
                             </div>
                           </div>
                           <div class="info-block-w-icon">
@@ -292,15 +295,15 @@ I hold a BSc (Hons) in Software Engineering from the University of Kelaniya, whe
                               <i class="lnr lnr-earth"></i>
                             </div><div class="ci-text">
                               <h4>Networking and Multiplayer</h4>
-                              <p>I develop and optimize networking and multiplayer systems by implementing replication, client-server communication, and synchronization of game states to ensure smooth and reliable online gameplay experiences in Unreal Engine.</p>
+                              <p>I implement networked gameplay in C++ using Unreal's replication system, replicated properties, RPCs, and authoritative client-server logic to keep game state synchronized and reliable.</p>
                             </div>
                           </div>
                           <div class="info-block-w-icon">
                             <div class="ci-icon">
                               <i class="lnr lnr-rocket"></i>
                             </div><div class="ci-text">
-                              <h4>Optimization and Profiling</h4>
-                              <p>I perform optimization and profiling by analyzing performance bottlenecks using Unreal Engine's tools, then refining code, assets, and systems to ensure smooth and efficient gameplay across target platforms.</p>
+                              <h4>Optimization, Profiling and Debugging</h4>
+                              <p>I profile and optimize C++ systems using Unreal Insights, stat commands, and debuggers, identifying bottlenecks, reducing tick and memory overhead, and fixing issues to ensure stable real-time performance.</p>
                             </div>
                           </div>
                         </div>
@@ -470,6 +473,18 @@ I hold a BSc (Hons) in Software Engineering from the University of Kelaniya, whe
                       <div class="timeline timeline-second-style clearfix">
                         <div class="timeline-item clearfix">
                           <div class="left-part">
+                            <h5 class="item-period">2026 - Present</h5>
+                            <span class="item-company">University of Peradeniya</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">MSc in Computer Science (Ongoing)</h4>
+                            <p>I'm currently pursuing an MSc in Computer Science at the University of Peradeniya, Sri Lanka, studying artificial intelligence, machine learning, neural networks, advanced computer graphics, and computer vision. I'm also exploring large language models, intelligent agents, agentic AI, and AI orchestration and workflow automation in modern software applications.</p>
+                          </div>
+                        </div>
+
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
                             <h5 class="item-period">2023</h5>
                             <span class="item-company">University of Kelaniya</span>
                           </div>
@@ -588,10 +603,10 @@ I hold a BSc (Hons) in Software Engineering from the University of Kelaniya, whe
                         <!-- Skill 2 -->
                         <div class="skill clearfix">
                           <h4>C++</h4>
-                          <div class="skill-value">45%</div>
+                          <div class="skill-value">70%</div>
                         </div>
                         <div class="skill-container skill-3">
-                          <div class="skill-percentage"></div>
+                          <div class="skill-percentage" style="width: 70%;"></div>
                         </div>
                         <!-- End of Skill 2 -->
                         
@@ -1588,5 +1603,6 @@ I hold a BSc (Hons) in Software Engineering from the University of Kelaniya, whe
 
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/hero-network.js"></script>
   </body>
 </html>
